@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Rousel from '../../components/Rousel/Rousel'
 class Home extends Component {
     render() {
         return (
             <div>
-                <div>这是主页的内容</div>
+                <Rousel />
             </div>
 
 
