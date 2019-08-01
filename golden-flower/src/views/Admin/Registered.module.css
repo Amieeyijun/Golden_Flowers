@@ -1,7 +1,30 @@
 .registered>form{
     margin: 0 auto;
     width: 500px;
-    height: 600px;
+    height: 515px;
     border: 1px solid transparent;
-    background-color: rgba(	245,245,245,.5)
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.registered {
+    width: 100%;
+    height: 515px;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.registered>form>div:first-child{
+    margin-top: 88px;
+}
+.registered>form>div{
+    margin-left: -97px;
+}
+.registered>form>div:last-child{
+    margin-left: 120px;
 }

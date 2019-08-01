@@ -9,25 +9,23 @@ import {
     Cascader,
     Select,
     Checkbox,
-    Button,
-    AutoComplete,
+    Button
 } from 'antd';
 
 const { Option } = Select;
-const AutoCompleteOption = AutoComplete.Option;
 
 const residences = [
     {
         value: 'zhejiang',
-        label: '’„Ω≠',
+        label: 'ÊµôÊ±ü',
         children: [
             {
                 value: 'hangzhou',
-                label: '∫º÷›',
+                label: 'Êù≠Â∑û',
                 children: [
                     {
                         value: 'xihu',
-                        label: 'Œ˜∫˛',
+                        label: 'Ë•øÊπñ',
                     },
                 ],
             },
@@ -35,15 +33,15 @@ const residences = [
     },
     {
         value: 'jiangsu',
-        label: 'Àƒ¥®',
+        label: 'ÂõõÂ∑ù',
         children: [
             {
                 value: 'nanjing',
-                label: '≥…∂º',
+                label: 'ÊàêÈÉΩ',
                 children: [
                     {
                         value: 'zhonghuamen',
-                        label: 'Ω≈£«¯',
+                        label: 'ÈáëÁâõÂå∫',
                     },
                 ],
             },
@@ -62,14 +60,24 @@ class Registered extends React.Component {
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                Axios.post('/login/Registe',values)  
+                if(values.agreement == true){
+                    Axios.post('/login/Registe', values)
                     .then(res => {
                         console.log(res)
-                        this.setState(res.data);
+                        if(res.data.msg == "reg_success"){
+                            alert("Ê≥®ÂÜåÊàêÂäü")
+                            this.props.history.push('/login')
+                        }else if(res.data.msg == "username_already_exist"){
+                            alert("ËØ•Áî®Êà∑ÂêçÂ∑≤Â≠òÂú®")
+                        }
                     })
                     .catch(err => {
                         console.error(err);
                     })
+                }
+                else{
+                    alert("ËØ∑ÁÇπÂáªÂêåÊÑèÂçèËÆÆ")
+                }
             }
         });
     };
@@ -99,7 +107,6 @@ class Registered extends React.Component {
 
     render() {
         const { getFieldDecorator } = this.props.form;
-        const { autoCompleteResult } = this.state;
 
         const formItemLayout = {
             labelCol: {
@@ -132,17 +139,17 @@ class Registered extends React.Component {
             </Select>,
         );
 
-        const websiteOptions = autoCompleteResult.map(website => (
-            <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
-        ));
 
         return (
             <div className={style.registered}>
+                <video autoPlay muted loop>
+                    <source src="https://www.matter.to/wp-content/uploads/2019/06/Matter_Reel_FA.mp4" />
+                </video>
                 <Form {...formItemLayout} onSubmit={this.handleSubmit} >
                     <Form.Item
                         label={
                             <span>
-                                ”√ªßÍ«≥∆&nbsp;
+                                Áî®Êà∑ÊòµÁß∞&nbsp;
                 <Tooltip title="What do you want others to call you?">
                                     <Icon type="question-circle-o" />
                                 </Tooltip>
@@ -153,7 +160,7 @@ class Registered extends React.Component {
                             rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
                         })(<Input />)}
                     </Form.Item>
-                    <Form.Item label="√‹¬Î" hasFeedback>
+                    <Form.Item label="ÂØÜÁ†Å" hasFeedback>
                         {getFieldDecorator('password', {
                             rules: [
                                 {
@@ -166,7 +173,7 @@ class Registered extends React.Component {
                             ],
                         })(<Input.Password />)}
                     </Form.Item>
-                    <Form.Item label="»∑»œ√‹¬Î" hasFeedback>
+                    <Form.Item label="Á°ÆËÆ§ÂØÜÁ†Å" hasFeedback>
                         {getFieldDecorator('confirm', {
                             rules: [
                                 {
@@ -194,7 +201,7 @@ class Registered extends React.Component {
                             ],
                         })(<Input />)}
                     </Form.Item>
-                    <Form.Item label="æ”◊°µÿ">
+                    <Form.Item label="Â±Ö‰ΩèÂú∞">
                         {getFieldDecorator('residence', {
                             initialValue: ['zhejiang', 'hangzhou', 'xihu'],
                             rules: [
@@ -202,7 +209,7 @@ class Registered extends React.Component {
                             ],
                         })(<Cascader options={residences} />)}
                     </Form.Item>
-                    <Form.Item label="¡™œµ∑Ω Ω">
+                    <Form.Item label="ËÅîÁ≥ªÊñπÂºè">
                         {getFieldDecorator('phone', {
                             rules: [{ required: true, message: 'Please input your phone number!' }],
                         })(<Input addonBefore={prefixSelector} style={{ width: '100%' }} />)}
@@ -220,7 +227,7 @@ class Registered extends React.Component {
                     </Form.Item>
                     <Form.Item {...tailFormItemLayout}>
                         <Button type="primary" htmlType="submit">
-                            ◊¢≤·
+                            Ê≥®ÂÜå
             </Button>
                     </Form.Item>
                 </Form>

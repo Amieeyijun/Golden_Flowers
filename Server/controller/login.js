@@ -1,25 +1,30 @@
 const express = require('express');
 const router = express.Router();
 router.post('/', (req, res) => {
-    let sql = 'SELECT * FROM user WHERE username = ? LIMIT 1';
-    mydb.query(sql, [req.body.name], (err, result) => {
-        if (err) {
-            console.log(err);
-            res.json({ msg: 'err' });
-            return;
-        }
-        // 检查账号是否存在  []  {}  ==>  true
-        if (result.length == 0) {
-            res.json({ msg: 'name-not-exist' });
-            return;
-        }
-        //检查密码是否正确  用户输入的密码 不等于 数据库里面的密码
-        if (req.body.passwd != result[0].passwd) {
-            res.json({ msg: 'passwd-err' });
-            return;
-        }
+    let sql = "select * from user where ";
+	sql += ` username="${req.body.username}" `;
+	mydb.query(sql, function (err, results) {
+		if (results.length == 0) {
+			res.json({
+				msg: "none"
+			})
+		} else if (results.length == 1) {
+			console.log(results)
+			if (results[0].password == req.body.password) {
+				res.json({
+					msg: "same",
+					userinfo: results[0]
+				})
+				
+			} else {
+				res.json({
+					msg: "different"
+				})
+			}
+		}
 
-    });
+
+	})
 });
 router.post("/Registe", function (req, res) {
 	console.log(req.body)

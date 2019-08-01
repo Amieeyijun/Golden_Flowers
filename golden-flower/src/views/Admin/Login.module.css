@@ -1,0 +1,25 @@
+.loginAll {
+  width: 100%;
+  height: 515px;
+  position: relative;
+}
+
+.loginAll label+a {
+  float: right;
+}
+
+.loginAll button {
+  width: 100%
+}
+
+.loginAll>form {
+  margin: 0 auto;
+  width: 300px;
+  border: 1px solid transparent;
+}
+.loginAll>form>div:first-child{
+  margin-top: 14em
+}
+.loginAll label span:last-child{
+  color: white
+}
