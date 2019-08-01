@@ -1,0 +1,7 @@
+.registered>form{
+    margin: 0 auto;
+    width: 500px;
+    height: 600px;
+    border: 1px solid transparent;
+    background-color: rgba(	245,245,245,.5)
+}

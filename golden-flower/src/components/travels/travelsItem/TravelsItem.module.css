@@ -1,0 +1,52 @@
+.box .divider {
+    display: block;
+    clear: both;
+    width: 40%;
+    min-width:40%;
+    height: 3px;
+    margin: 24px auto 20px;
+    background-color: #ABABAB
+}
+.box {
+    width: 100%;
+    margin-bottom: 30px;
+    /* height: 300px; */
+    /* background: pink; */
+}
+/* .box:hover{
+    box-shadow:0 0 2px #000;
+} */
+.imgbox{
+    width: 100%;
+}
+.imgbox >img{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    padding: 10px;
+    width: 100%;
+    height: 3em;
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5em;
+    word-wrap: break-word;
+}
+.info{
+    color: #585757;
+    padding: 0 10px;
+    text-align: center
+}
+.folowme{
+    text-align: center;
+    margin-top: 20px;
+}
+.folowme a{
+    color: #767575;
+    font-weight: 700;
+}
+.folowme a:hover{
+    color:orange;
+}
