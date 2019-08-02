@@ -5,6 +5,9 @@ import Login from './views/Admin/Login'
 import Registered from './views/Admin/Registered'
 import Goods from './views/Goods/Goods'
 import Travel from './views/Travel/Travel'
+import TravelsDetail from './components/travels/travelsdetail/TravelsDetail'
+
+
 
 const routes=[
     {
@@ -36,11 +39,12 @@ const routes=[
                 path:'/registered',
                 component:Registered
             },
+            {
+                path: '/travelsdetail',
+                component: TravelsDetail
+            }
         ]
     },
-    {
-        path: '/travelsdetail',
-        component: Registered
-    }
+
 ]
 export default routes;
