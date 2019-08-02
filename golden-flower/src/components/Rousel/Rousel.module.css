@@ -67,7 +67,7 @@
 .linkage {
     position: absolute;
     width: 75em;
-    height: 12.5em;
+    height: 10em;
     top: 28em;
     left: 12em;
     display: flex;
@@ -75,7 +75,7 @@
 }
 .linkage div {
     width: 16em;
-    height: 12.5em;
+    height: 10em;
 }
 .linkage img{
     width: 100%;
