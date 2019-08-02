@@ -61,6 +61,11 @@ app.use('/travels', require('./controller/travels'))
 
 
 
+//提供session信息的路由
+app.get('/check', (req, res) => {
+    console.log(req.session);
+    res.json({ aid: req.session.aid, name: req.session.name });
+});
 
 // 接受上传的图片
 app.post('/uploads', upload.single('images'), function (req, res, next) {

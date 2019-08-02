@@ -35,7 +35,7 @@ class Login extends Component {
         return (
             <div className={style.loginAll}>
                 <video autoPlay muted loop>
-                    <source src={require("../../pub/190226114427554623_480.mp4")} />
+                    <source src={require("../../video/190226114427554623_480.mp4")} />
                 </video>
                 <Form onSubmit={this.handleSubmit} className="login-form">
                     <Form.Item>

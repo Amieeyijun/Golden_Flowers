@@ -5,10 +5,10 @@ import { Row, Col } from 'antd';
 class TopMenu extends Component {
     constructor(props) {
         super(props);
-        this.state={}
-        this.changeColor=this.changeColor.bind(this)
+        this.state = {}
+        this.changeColor = this.changeColor.bind(this)
     }
-    changeColor(e){
+    changeColor(e) {
         console.log(e.target)
 
     }
@@ -27,22 +27,15 @@ class TopMenu extends Component {
 
                                 </div>
                                 <div className={style.contain} onClick={this.changeColor}>
-                                    <div className={style.com}> 
-                                        <Link to='/'>首页</Link>
-                                    </div>
-                                    <div>
-                                        <Link to='/travel'>旅游攻略</Link>
-                                    </div>
-                                    <div>
-                                        <Link to='/goods'>去旅游</Link>
-                                    </div>
-                                    <div>
-                                        <Link to='/admin'>个人中心</Link>
-                                    </div>
-                                    <div>
+                                    <Link to='/' className={style.home}> 首页</Link>
+                                    <Link to='/travel' className={style.home}>旅游攻略</Link>
+                                    <Link to='/goods' className={style.home}>去旅游</Link>
+                                    <Link to='/admin' className={style.home}>个人中心</Link>
+                                    <div className={style.login}>
                                         <Link to='/login'>登录/</Link>
                                         <Link to='/registered'>注册</Link>
                                     </div>
+
                                 </div>
                             </div>
 
