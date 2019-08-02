@@ -1,0 +1,41 @@
+.title{
+    width: 100%;
+    height:8em;
+    color:black;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: left;
+    padding: 0 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+.title img{
+    width: 2em;
+    height: 2em;
+}
+.title .info{
+    margin-top: 20px;
+    font-size: 16px;
+    color: #535353;
+    padding-left: 5em;
+
+}
+.title div{
+    padding-left: 3em;
+}
+.titleimg{
+    align-self: flex-end;
+}
+.contentbox{
+    width: 80%;
+    /* background: #FDEFE6; */
+    margin: 2em auto
+}
+.publisher{
+    font-size: 24px;
+    /* color: red; */
+}
+.content{
+    margin: 2em 0;
+}
