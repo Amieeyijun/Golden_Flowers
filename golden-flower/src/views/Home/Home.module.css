@@ -1,0 +1,190 @@
+.search {
+    width: 100%;
+    min-height: 400px;
+    padding: 1px;
+    /* background-color: aquamarine; */
+    position: relative;
+}
+
+.travel {
+    width: 1100px;
+    min-height: 200px;
+    margin: auto
+}
+
+.japen {
+    width: 1000px;
+    min-height: 300px;
+    margin: auto;
+    margin-top: 80px
+}
+
+.japen p {
+    color: #6e6e6e;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px
+}
+
+.title {
+    display: flex;
+    justify-content: space-between
+}
+
+.divi {
+    height: 2px;
+    width: 825px;
+    background-color: #6e6e6e;
+    margin-top: 32px;
+}
+
+.japen_attrction {
+    width: 1000px;
+    min-height: 700px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.xizang {
+    width: 1000px;
+    min-height: 300px;
+    margin: auto;
+}
+
+.xizang p {
+    color: #6e6e6e;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px
+}
+
+.comments {
+    width: 100%;
+    min-height: 500px;
+    background: linear-gradient( rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url('../../imgs/1.png');
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+    box-sizing: border-box;
+    margin-top: 70px;
+    position: relative;
+}
+
+span.start::before {
+    background: #272727;
+    content: " ";
+    display: block;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+    width: 3px;
+}
+
+span.start {
+    position: absolute;
+    height: 22px;
+    width: 3px;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px
+}
+
+.comments h2 {
+    color: #ffffff;
+    text-align: center;
+    font-family: '幼圆';
+    font-weight: 700;
+    margin-bottom: 10px
+}
+
+.comments_rousel {
+    width: 1100px;
+    height: 345px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between
+}
+
+.comments_rousel div {
+    width: 340px;
+    height: 345px;
+}
+
+.comments_rousel img {
+    width: 100%;
+    height: 218px
+}
+
+.comments_rousel span {
+    display: block;
+    text-align: center;
+    color: #ef6c00;
+    font-size: 14px
+}
+
+.comments_rousel p {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 700
+}
+
+span.sep {
+    display: block;
+    height: 20px;
+    width: 1px;
+    background-color: #a9a9a9;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px
+}
+
+span.add {
+    font-size: 11px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #a9a9a9
+}
+
+.pre {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    left: 0px;
+    top: 40%;
+    text-align: center;
+    line-height: 50px
+}
+
+.pre img {
+    width: 50%;
+    height: 50%
+}
+
+.next {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    right: 0px;
+    top: 40%;
+    text-align: center;
+    line-height: 50px
+}
+
+.next img {
+    width: 50%;
+    height: 50%
+}
+
+.points {
+    width: 1000px;
+    min-height: 300px;
+    margin: auto;
+    background-color: #ef6c00
+}
