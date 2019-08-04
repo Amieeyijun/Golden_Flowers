@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.imgtop{
+    width: 100%
+}
+.ant-menu-horizontal > .ant-menu-item{
+    position: relative;
+    top: 1px;
+    left: 22%;
+    display: inline-block;
+    vertical-align: bottom;
+    border-bottom: 2px solid transparent;
+}
+.col{
+    background-color: azure
+}
+.sdaohang{
+    height: 60px;
+    line-height: 60px !important;
+    box-shadow: 0px 4px 4px 0px	#DCDCDC !important
+}
+.sdaohang li{
+    z-index: 2;
+}
+.first{
+    left: 37%;
+}
+.second{
+    left: 37%;
+}
+.third{
+    left: 37%;
+}
+.fouth{
+    left: 37%;
+}
+.fifth{
+    left: 37%;
+}
+.bodyer{
+    width: 55%;
+    height: 100em;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.six{
+    height: 80em;
+    background-color: #ffffff;
+}
+.bodyer .personSrc{
+    position: absolute;
+    left: 26%;
+    top: -5%;
+}
+.bodyer .title{
+    font-size: 22px;
+    line-height: 24px;
+    margin-top:78px; 
+    margin-left: 90px;
+    color: #666;
+    font-family: cursive
+}
+
