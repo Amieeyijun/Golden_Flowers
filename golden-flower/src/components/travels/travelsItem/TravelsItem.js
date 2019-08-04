@@ -14,7 +14,7 @@ class TravelsItem extends Component {
         this.toDetail = this.toDetail.bind(this);
     }
     toDetail() {
-        this.props.history.push("/travelsdetail");
+        this.props.history.push("/travelsdetail?id=" + this.state.itemData.tid);
     }
     render() {
         return (
@@ -34,7 +34,7 @@ class TravelsItem extends Component {
                         {this.state.itemData.info}
                     </div>
                     <div className={style.folowme}>
-                        <Link to="/travelsdetail">
+                        <Link to={"/travelsdetail?id=" + this.state.itemData.tid}>
                             跟我走吧
                             </Link>
                     </div>
@@ -42,7 +42,7 @@ class TravelsItem extends Component {
 
 
 
-            </div>
+            </div >
         );
     }
 }

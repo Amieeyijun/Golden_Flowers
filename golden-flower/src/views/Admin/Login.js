@@ -13,14 +13,14 @@ class Login extends Component {
                     .then(res => {
                         console.log(res)
                         if (res.data.msg == "none") {
-                            alert("ÓÃ»§²»´æÔÚ")
+                            alert("ç”¨æˆ·ä¸å­˜åœ¨")
                         } else if (res.data.msg == "same") {
-                            alert("µÇÂ½³É¹¦");
+                            alert("ç™»é™†æˆåŠŸ");
                             this.props.history.push('/')
                             window.sessionStorage.setItem("user", JSON.stringify(res.data.userinfo))
                             console.log(window.sessionStorage)
                         } else if (res.data.msg == 'different') {
-                            alert("ÃÜÂë´íÎó")
+                            alert("å¯†ç é”™è¯¯")
                         }
                     })
                     .catch(err => {

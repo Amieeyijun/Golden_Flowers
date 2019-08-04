@@ -33,5 +33,15 @@ router.get("/getTravels", (req, res) => {
         res.send(result)
     });
 })
+router.get("/getDetail", (req, res) => {
+    let sql = 'select * from travels where tid =' + req.query.infoid;
+    mydb.query(sql, (err, result) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        res.send(result)
+    });
+})
 
 module.exports = router;
