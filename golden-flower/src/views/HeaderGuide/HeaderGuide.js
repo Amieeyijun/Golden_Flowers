@@ -7,9 +7,8 @@ class HeaderGuide extends Component {
             <div>
                 <div>
                     <TopMenu></TopMenu>
-
+               
                     {renderRoutes(this.props.route.children)}
-                    {/* {renderRoutes(this.props.route)} */}
                 </div>
             </div>
         );
