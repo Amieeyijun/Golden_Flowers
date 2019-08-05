@@ -1,0 +1,93 @@
+.seach {
+    width: 1000px;
+    height: 80px;
+    margin: auto;
+    background: url('../../imgs/bg_ziyouxing.jpg');
+    display: flex;
+    align-items: center;
+}
+
+.inp {
+    width: 670px;
+    height: 40px;
+    background-color: rgba(228, 187, 133, 0.8);
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.departure {
+    width: 120px;
+    height: 30px;
+    background-color: aliceblue;
+    line-height: 30px;
+    text-align: center
+}
+
+.departure a {
+    color: #222222;
+    font-size: 16px
+}
+
+.departure span {
+    font-size: 12px
+}
+
+.departure a:hover {
+    color: #222222
+}
+
+.inp img {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.inp input {
+    width: 428px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: aliceblue;
+    padding-left: 10px;
+    box-sizing: border-box
+}
+
+.inp_search {
+    width: 60px;
+    height: 30px;
+    margin-left: 15px
+}
+
+.inp_search img {
+    width: 30px;
+    height: 30px
+}
+
+.main {
+    width: 1000px;
+    min-height: 300px;
+    margin: auto
+}
+
+.hotCity {
+    width: 386px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hotCity li {
+    list-style: none;
+    margin: 0px 10px
+}
+
+.hotCity a {
+    color: gray;
+}
+
+.hotCity a:hover {
+    color: rgb(228, 187, 133)
+}

@@ -7,8 +7,13 @@ class Japen extends Component {
         this.detail = this.detail.bind(this)
     }
     detail(e) {
-        console.log(e)
-        // this.props.history.push('/admin')    
+        console.log(e.target.id)
+        if (e.target.id == '0') {
+            this.props.history.push('/goods')
+        }
+        if (e.target.id == '1') {
+            this.props.history.push('/travel')
+        }
 
     }
     render() {
@@ -19,7 +24,7 @@ class Japen extends Component {
                         <img src={this.props.aimg} />
                     </div>
                     <div className={style.product_con}>
-                        <div className={style.name} style={{ background: this.props.acolor }} onClick={this.detail} >
+                        <div className={style.name} style={{ background: this.props.acolor }} onClick={this.detail} id={this.props.aid}>
                             {this.props.atitle}
                         </div>
                         <span>

@@ -48,7 +48,7 @@ class Home extends Component {
             )
         axios.get('/attract/gettravels')
             .then((res) => {
-                console.log(res.data)
+                
                 this.setState(
                     { travelsData: res.data }
                 )
@@ -84,8 +84,8 @@ class Home extends Component {
                                     {
                                         this.state.allData.map((item, index) => {
                                             if (item.Aregin == '日本') {
-                                                console.log(item.Aregin)
-                                                return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor}  />)
+                                               
+                                                return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor} aid='0' />)
                                             }
 
                                         })}
@@ -101,8 +101,8 @@ class Home extends Component {
                                     {
                                         this.state.allData.map((item, index) => {
                                             if (item.Aregin == '西藏') {
-                                                console.log(item.Aregin)
-                                                return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor} />)
+                                                
+                                                return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor}  aid='0'/>)
                                             }
 
                                         })}
@@ -119,8 +119,8 @@ class Home extends Component {
                                     {
                                         this.state.allData.map((item, index) => {
                                             if (item.Aregin == '沙巴') {
-                                                console.log(item.Aregin)
-                                                return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor} />)
+                                               
+                                                return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor}  aid='0'/>)
                                             }
 
                                         })}
@@ -305,7 +305,7 @@ class Home extends Component {
                         </div>
                         <div className={style.show}>
                             {this.state.travelsData.map((item, index) => {
-                                return <Japen key={index} aimg={item.img} atitle={item.publisher} aInfo={item.info} acolor='#f3a647' />
+                                return <Japen key={index} aimg={item.img} atitle={item.publisher} aInfo={item.info} acolor='#f3a647'  aid='1'/>
                             })}
                         </div>
                     </Col>
