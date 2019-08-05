@@ -7,7 +7,7 @@ import Goods from './views/Goods/Goods'
 import Travel from './views/Travel/Travel'
 import TravelsDetail from './components/travels/travelsdetail/TravelsDetail'
 import App from './views/App/App'
-
+import AdminInfo from './views/Admin/AdminInfo'
 
 
 const routes=[
@@ -30,7 +30,14 @@ const routes=[
             },
             {
                 path:'/admin',
-                component:Admin
+                component:Admin,
+                children:[
+                    {
+                        path:"/",
+                    
+                    }
+
+                ]
             },
             {
                 path:'/login',
@@ -47,6 +54,10 @@ const routes=[
             {
                 path: '/app',
                 component: App
+            },
+            {
+                path: '/admininfo',
+                component: AdminInfo
             }
         ]
     },
