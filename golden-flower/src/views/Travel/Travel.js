@@ -4,6 +4,7 @@ import { Row, Col } from 'antd';
 import style from "./Travel.module.css"
 import TravelsItem from '../../components/travels/travelsItem/TravelsItem';
 import { Carousel } from 'antd';
+import { Pagination } from 'antd';
 import Axios from "../../Axios/Axios"
 
 class Travel extends Component {
@@ -19,7 +20,7 @@ class Travel extends Component {
     componentDidMount() {
         Axios.get('/travels/getTravels')
             .then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 this.setState({
                     ItemData: res.data
                 });
@@ -78,7 +79,11 @@ class Travel extends Component {
                                     </div>
                                 </Col>
                             </Row>
+
                         </div>
+                    </div>
+                    <div className={style.fenye}>
+                        <Pagination defaultCurrent={1} total={50} />
                     </div>
                 </div>
             </div >

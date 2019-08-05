@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import TopMenu from '../../components/TopMenu/TopMenu'
+import BottomMenu from '../../components/BottomMenu/BottomMenu'
+
 import { renderRoutes } from 'react-router-config';
 class HeaderGuide extends Component {
     render() {
@@ -9,6 +11,8 @@ class HeaderGuide extends Component {
                     <TopMenu></TopMenu>
                
                     {renderRoutes(this.props.route.children)}
+
+                    <BottomMenu></BottomMenu>
                 </div>
             </div>
         );

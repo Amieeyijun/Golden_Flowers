@@ -9,14 +9,10 @@
 }
 .box {
     width: 100%;
-    margin-bottom: 10px;
+    margin: 20px 0;
     background-color: white
-    /* height: 300px; */
-    /* background: pink; */
 }
-/* .box:hover{
-    box-shadow:0 0 2px #000;
-} */
+
 .imgbox{
     width: 100%;
 }
@@ -24,6 +20,9 @@
     width: 100%;
     height: 100%;
 }
+.infobox{
+    background: #F9F9F9
+    }
 .title{
     padding: 10px;
     width: 100%;

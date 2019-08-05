@@ -55,7 +55,7 @@ class TravelsDetail extends Component {
                     </div>
                     <div className={style.userpost}>
                         <div>
-                            <div style={{ fontSize: '20px', fontWeight: 700 }}>taµÄÌû×Ó</div>
+                            <div style={{ fontSize: '20px', fontWeight: 700 }}>taçš„å¸–å­</div>
                             {
                                 this.state.postdata.map((item, ind) => {
                                     return (
@@ -64,7 +64,7 @@ class TravelsDetail extends Component {
                                             <div className={style.postinfo}>
                                                 <div className={style.postdate}>
                                                     <p>Post By{item.publisher}</p>
-                                                    <p>2018Äê6ÔÂ2ÈÕ</p>
+                                                    <p>2019å¹´6æœˆ2æ—¥</p>
                                                 </div>
                                                 <div className={style.infotitle}>
                                                     {item.title}

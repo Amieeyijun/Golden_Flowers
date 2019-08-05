@@ -1,0 +1,54 @@
+.bottombox{
+    width: 100%;
+    height: 500px;
+    padding: 5em 0;
+    background: #131313;
+}
+.rowbox{
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.gutter{
+    border-top: 1px solid #2B2B2B;
+}
+.gutter .divider{
+    display: block;
+    clear: both;
+    width: 15%;
+    min-width:15%;
+    height: 2px;
+    background-color: white
+}
+.bottomtitle{
+    width: 100%;
+    color:white;
+    font-size: 20px;
+    font-weight: 700;
+ 
+}
+.youjibox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.youjibox img{
+    width: 85px;
+    height: 85px;
+}
+.youji{
+    width: 73%;
+    color: white;
+    padding-right: 5px;
+}
+.youji>p{
+    margin-bottom: 5px;
+}
+.youji p:nth-child(1){
+/* font-size: 16px; */
+font-weight: 600;
+}
+.aboutus>p{
+    color:white
+}
