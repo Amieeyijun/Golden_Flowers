@@ -216,7 +216,11 @@ class Home extends Component {
                                 <img src={require('../../imgs/next.png')} />
                             </div>
                         </div>
-                        <div className={style.points}></div>
+                        <div className={style.points}>
+
+
+                            
+                        </div>
 
                     </Col>
                 </Row>
