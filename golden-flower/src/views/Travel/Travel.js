@@ -56,7 +56,7 @@ class Travel extends Component {
                 <div className={style.backimg}>
                     <div className={style.box}>
                         <div className={style.gutter_example}>
-                            <Row gutter={20}>
+                            <Row gutter={25}>
                                 <Col className={style.gutter_row} span={8}>
                                     <div className={style.gutter_box}>
                                         {this.state.ItemData[0].map((item, ind) => {
