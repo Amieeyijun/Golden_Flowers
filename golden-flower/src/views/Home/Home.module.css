@@ -186,5 +186,28 @@ span.add {
     width: 1000px;
     min-height: 300px;
     margin: auto;
-    background-color: #ef6c00
+    margin-top: 80px;
+    display: flex
+}
+
+.points_left {
+    width: 30%;
+    min-height: 300px;
+    background-color: white;
+    border-right: 1px solid #ddd
+}
+
+.points_right {
+    width: 70%;
+    min-height: 300px
+}
+
+.points_fun {
+    width: 90%;
+    height: 200px;
+}
+
+.points_fun:nth-of-type(2) {
+    border-top: 2px dashed #ddd;
+    border-bottom: 2px dashed #ddd;
 }

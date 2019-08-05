@@ -217,9 +217,14 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className={style.points}>
-
-
-                            
+                            <div className={style.points_left}>
+                                <div className={style.points_fun}></div>
+                                <div className={style.points_fun}>
+                                
+                                </div>
+                                <div className={style.points_fun}></div>
+                            </div>
+                            <div className={style.points_right}></div>
                         </div>
 
                     </Col>
