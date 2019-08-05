@@ -1,29 +1,37 @@
 import React, { Component } from 'react';
-import style from './Japen.module.css'
-
+import style from './Japen.module.css';
+import {withRouter} from 'react-router-dom'
 class Japen extends Component {
-    render() {
+    constructor(props) {
+        super(props)
+        this.detail = this.detail.bind(this)
+    }
+    detail(e) {
+        this.props.history.push('/admin')
+        console.log(e.target.innerHTML)
+    }
+    render() {  
         return (
             <div>
-                <div className={style.main}>
+                <div className={style.main} onClick={this.detail}>
                     <div className={style.product_img}>
-                        <img src="https://b2-q.mafengwo.net/s11/M00/6A/14/wKgBEFsOYY-AR81qAACZE-_DH0k95.jpeg" />
+                        <img src={this.props.aimg} />
                     </div>
                     <div className={style.product_con}>
-                        <div className={style.name}>
-                            京都
+                        <div className={style.name} style={{ background: this.props.acolor }}>
+                            {this.props.atitle}
                         </div>
                         <span>
-                            京都是日本传统文化的中心，这里有上千年的历史古建筑，穿着和服踏着小碎步的少女，代表日本料理最高水平的怀石料理等等。毋庸置疑，京都一定是日本行程中，不可错过的目的地
-                     </span>
+                            {this.props.aInfo}
+                        </span>
 
                     </div>
 
                 </div>
 
-            </div>
+            </div >
         );
     }
 }
 
-export default Japen;
+export default withRouter(Japen);

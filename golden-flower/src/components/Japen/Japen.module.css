@@ -30,7 +30,6 @@
     height: 40px;
     left: 30%;
     top: -15%;
-    background-color: #ec333f;
     color: aliceblue;
     font-family: '幼圆';
     text-align: center;
@@ -44,6 +43,11 @@
     color: gray;
     font-size: 14px;
     margin-top: 15px;
+    margin-bottom: 15px;
+    height: 125px;
     padding: 15px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: pre-wrap;
+    text-overflow: ellipsis
 }

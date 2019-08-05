@@ -4,15 +4,25 @@ import Search from '../../components/Search/Search'
 import Japen from '../../components/Japen/Japen'
 import Attract from '../../components/Attract/Attract'
 import style from './Home.module.css'
+import axios from '../../Axios/Axios'
 import { Carousel } from 'antd'
 import { Row, Col } from 'antd';
-import { Divider } from 'antd';
+import { BackTop } from 'antd';
 class Home extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            allData: [],
+            travelsData: []
+        }
         this.onChange = this.onChange.bind(this)
         this.pre = this.pre.bind(this)
         this.next = this.next.bind(this)
+        this.goDetail = this.goDetail.bind(this)
+    }
+    goDetail(e) {
+        console.log(e.target);
+
     }
     onChange(a, b, c) {
         console.log(a, b, c);
@@ -23,11 +33,39 @@ class Home extends Component {
     next() {
         this.choose.slick.slickNext()
     }
+    componentDidMount() {
+        axios.get('/attract/get')
+            .then((res) => {
+                console.log(res.data)
+                this.setState(
+                    { allData: res.data }
+                )
+            })
+            .catch(
+                (err) => {
+                    console.log(err);
+                }
+            )
+        axios.get('/attract/gettravels')
+            .then((res) => {
+                console.log(res.data)
+                this.setState(
+                    { travelsData: res.data }
+                )
+                console.log(this.state.travelsData)
+            })
+            .catch(
+                (err) => {
+                    console.log(err);
+                }
+            )
+    }
     render() {
         return (
             <div>
                 <Row>
                     <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                        <BackTop visibilityHeight='650' />
                         <div className={style.rousels}><Rousel /></div>
                         <div className={style.search}>
                             <Search />
@@ -43,12 +81,14 @@ class Home extends Component {
                                 </div>
                                 <img src={require('../../imgs/japen.jpg')} />
                                 <div className={style.japen_attrction}>
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
+                                    {
+                                        this.state.allData.map((item, index) => {
+                                            if (item.Aregin == '日本') {
+                                                console.log(item.Aregin)
+                                                return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor}  />)
+                                            }
+
+                                        })}
                                 </div>
                             </div>
                             <div className={style.xizang}>
@@ -58,12 +98,14 @@ class Home extends Component {
                                 </div>
                                 <img src={require('../../imgs/japen.jpg')} />
                                 <div className={style.japen_attrction}>
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
+                                    {
+                                        this.state.allData.map((item, index) => {
+                                            if (item.Aregin == '西藏') {
+                                                console.log(item.Aregin)
+                                                return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor} />)
+                                            }
+
+                                        })}
                                 </div>
                             </div>
 
@@ -74,12 +116,14 @@ class Home extends Component {
                                 </div>
                                 <img src={require('../../imgs/japen.jpg')} />
                                 <div className={style.japen_attrction}>
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
-                                    <Japen />
+                                    {
+                                        this.state.allData.map((item, index) => {
+                                            if (item.Aregin == '沙巴') {
+                                                console.log(item.Aregin)
+                                                return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor} />)
+                                            }
+
+                                        })}
                                 </div>
                             </div>
                         </div>
@@ -218,15 +262,52 @@ class Home extends Component {
                         </div>
                         <div className={style.points}>
                             <div className={style.points_left}>
-                                <div className={style.points_fun}></div>
                                 <div className={style.points_fun}>
-                                
+                                    <h3>JUNE</h3>
+                                    <p>Qinghai Province</p>
                                 </div>
-                                <div className={style.points_fun}></div>
+                                <div className={style.points_fun}>
+                                    <h3>JULY</h3>
+                                    <p>United States of America</p>
+                                </div>
+                                <div className={style.points_fun}>
+                                    <h3>AUGUST</h3>
+                                    <p>Dunhuang</p>
+                                </div>
                             </div>
-                            <div className={style.points_right}></div>
+                            <div className={style.points_right}>
+                                <h2>旅行的意义 — 身未动 心已远  </h2>
+                                <p>在每个人的青春年岁里，都曾有过一段关于旅行的憧憬，一段说走就走的旅行。可是在现实里，因为种种的原因，这个美好的希冀变成了每个午夜梦回的美好梦想</p>
+                                <div className={style.right_comment}>
+                                    <div className={style.comtain_1}>
+                                        <div className={style.twitter}>
+                                            <h6>一休的窝:</h6>
+                                            <a href="#">顶</a>
+                                            <p>“万物皆有裂痕，那是光进来的地方。”这是科恩写的一句诗，在旅途之初我对他还不甚了解。回来再给游记配乐的时候，一下子毫无头绪的游记就有了灵感。游吟诗，就是最适合这趟北美行的表达方式”</p>
+                                        </div>
+                                        <div className={style.facebook}>
+                                            <h6>Yozuki毛毛酱</h6>
+                                            <img src="https://b3-q.mafengwo.net/s12/M00/17/7F/wKgED1vpTYaAK6MfAAkdaR5NnKs66.jpeg?imageMogr2%2Fthumbnail%2F%21200x200r%2Fgravity%2FCenter%2Fcrop%2F%21200x200%2Fquality%2F90" width='30px' height='30px' />
+                                            {/* <i className={style.MAvaTagfengshou}></i> */}
+                                            <p>“才多少米之差，坡上妖风阵阵，把经幡吹动得作响，不过肆意飘起的一串串经幡，给单调的泸源崖增添了色彩”</p>
+                                        </div>
+                                    </div>
+                                    <div className={style.comtain_1}>
+                                        <h3>雷克雅未克 大教堂</h3>
+                                        <span>管风琴的设计</span>
+                                    </div>
+                                    <div className={style.comtain_1}>
+                                        <h3>威海 刘公岛</h3>
+                                        <span>感受历史的厚重感</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
+                        <div className={style.show}>
+                            {this.state.travelsData.map((item, index) => {
+                                return <Japen key={index} aimg={item.img} atitle={item.publisher} aInfo={item.info} acolor='#f3a647' />
+                            })}
+                        </div>
                     </Col>
                 </Row>
 

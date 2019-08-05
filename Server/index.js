@@ -58,7 +58,8 @@ app.get('/', (req, res) => {
 app.use('/login', require('./controller/login'))
 //旅游攻略子路由
 app.use('/travels', require('./controller/travels'))
-
+    // 旅游景点子路由
+app.use('/attract', require('./controller/attract'))
 
 
 
