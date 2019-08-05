@@ -76,14 +76,14 @@ class Home extends Component {
                         <div>
                             <div className={style.japen}>
                                 <div className={style.title}>
-                                    <p>������ѡ  |  �ձ�</p>
+                                    <p>当季精选  |  日本</p>
                                     <div className={style.divi}></div>
                                 </div>
                                 <img src={require('../../imgs/japen.jpg')} />
                                 <div className={style.japen_attrction}>
                                     {
                                         this.state.allData.map((item, index) => {
-                                            if (item.Aregin == '�ձ�') {
+                                            if (item.Aregin == '日本') {
                                                 console.log(item.Aregin)
                                                 return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor}  />)
                                             }
@@ -93,14 +93,14 @@ class Home extends Component {
                             </div>
                             <div className={style.xizang}>
                                 <div className={style.title}>
-                                    <p>������ѡ  |  ����</p>
+                                    <p>当季精选  |  西藏</p>
                                     <div className={style.divi}></div>
                                 </div>
                                 <img src={require('../../imgs/japen.jpg')} />
                                 <div className={style.japen_attrction}>
                                     {
                                         this.state.allData.map((item, index) => {
-                                            if (item.Aregin == '����') {
+                                            if (item.Aregin == '西藏') {
                                                 console.log(item.Aregin)
                                                 return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor} />)
                                             }
@@ -111,14 +111,14 @@ class Home extends Component {
 
                             <div className={style.xizang}>
                                 <div className={style.title}>
-                                    <p>������ѡ  |  ɳ��</p>
+                                    <p>当季精选  |  沙巴</p>
                                     <div className={style.divi}></div>
                                 </div>
                                 <img src={require('../../imgs/japen.jpg')} />
                                 <div className={style.japen_attrction}>
                                     {
                                         this.state.allData.map((item, index) => {
-                                            if (item.Aregin == 'ɳ��') {
+                                            if (item.Aregin == '沙巴') {
                                                 console.log(item.Aregin)
                                                 return (<Japen key={index} aimg={item.Aimg} atitle={item.Atitle} aInfo={item.AInfo} acolor={item.Acolor} />)
                                             }
@@ -129,32 +129,32 @@ class Home extends Component {
                         </div>
                         <div className={style.comments}>
                             <span className={style.start}></span>
-                            <h2>���ι���</h2>
+                            <h2>旅游攻略</h2>
                             <div>
                                 <Carousel dots='false' autoplay ref={el => { this.choose = el }}>
                                     <div>
                                         <div className={style.comments_rousel}>
                                             <div >
                                                 <img src={require('../../imgs/rousel1.jpeg')} />
-                                                <span>�ش�ʿ</span>
-                                                <p>���й�Ҳ��27��</p>
+                                                <span>必达士</span>
+                                                <p>氹仔官也街27号</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>Ӫҵʱ�䣺11��00��22:00</span>
+                                                <span className={style.add}>营业时间：11：00—22:00</span>
 
                                             </div>
                                             <div>
                                                 <img src={require('../../imgs/rousel2.jpeg')} />
-                                                <span>Ī���</span>
-                                                <p>���оɳ�����Ҳ��9��A��</p>
+                                                <span>莫义记</span>
+                                                <p>氹仔旧城区官也街9号A铺</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>Ӫҵʱ�䣺11:00-21:00</span>
+                                                <span className={style.add}>营业时间：11:00-21:00</span>
                                             </div>
                                             <div>
                                                 <img src={require('../../imgs/rousel3.jpeg')} />
-                                                <span>С�����Ϲ�����</span>
-                                                <p>���Ś��еر���ϲ���ǹ㳡2¥</p>
+                                                <span>小飞象葡国餐厅</span>
+                                                <p>澳门氹仔地堡街喜来登广场2楼</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>Ӫҵʱ�䣺12:00��23:30</span>
+                                                <span className={style.add}>营业时间：12:00—23:30</span>
                                             </div>
                                         </div>
                                     </div>
@@ -163,29 +163,29 @@ class Home extends Component {
 
                                             <div >
                                                 <img src='https://n1-q.mafengwo.net/s10/M00/5C/50/wKgBZ1ouoM-ABC0uAAUJngE3vB455.jpeg' />
-                                                <span>��ʲ�����</span>
-                                                <p>�ƻ�ĺ�̲������С���Ĳ���ѡ��</p>
+                                                <span>尼甘布鱼市</span>
+                                                <p>黄昏的海滩是游玩小憩的不二选择</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>TIPS.��ѻ�� ˹������ ������</span>
+                                                <span className={style.add}>TIPS.乌鸦是 斯里兰卡 的神鸟</span>
                                             </div>
 
 
                                             <div >
                                                 <img src='https://p3-q.mafengwo.net/s10/M00/F9/B0/wKgBZ1oykSqAUh5QAAxauCoJD1U77.jpeg' />
-                                                <span>ʨ����</span>
-                                                <p>�����ĸ����ûʻû���һ��ǳǳ��ʯש</p>
+                                                <span>狮子岩</span>
+                                                <p>曾经的富丽堂皇幻化成一层浅浅的石砖</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>Tips:�ڻ����Ĺ涨��������</span>
+                                                <span className={style.add}>Tips:壁画明文规定不能拍照</span>
 
                                             </div>
 
 
                                             <div >
                                                 <img src='https://b4-q.mafengwo.net/s10/M00/E0/82/wKgBZ1o30YWABFTmAAPPpUZPqog71.jpeg' />
-                                                <span>������</span>
-                                                <p>�����ҳ�������ʫ</p>
+                                                <span>佛牙寺</span>
+                                                <p>不如我唱首赞美诗</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>Tips:�����ϸ�</span>
+                                                <span className={style.add}>Tips:安检严格</span>
 
                                             </div>
 
@@ -196,28 +196,28 @@ class Home extends Component {
 
                                             <div >
                                                 <img src='https://p2-q.mafengwo.net/s13/M00/81/99/wKgEaVyuppKAHz0OAADQUPBMXHE69.jpeg' />
-                                                <span>�����к���</span>
-                                                <p>�����ͯ��ƵĿɰ�ר��</p>
+                                                <span>阿苏男孩号</span>
+                                                <p>面向儿童设计的可爱专列</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>����ʱ�䣺1������2��</span>
+                                                <span className={style.add}>运行时间：1日往返2次</span>
 
                                             </div>
                                             <div >
                                                 <img src='https://b3-q.mafengwo.net/s13/M00/81/CC/wKgEaVyuppmAR5r4AAKfk8_ubvw05.jpeg' />
-                                                <span>SL�˼������г�</span>
-                                                <p>�ձ�����ϵ�������������</p>
+                                                <span>SL人吉蒸汽列车</span>
+                                                <p>日本最古老的现役蒸汽机车</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>����ʱ�䣺1������1�� </span>
+                                                <span className={style.add}>运行时间：1日往返1次 </span>
 
                                             </div>
 
 
                                             <div >
                                                 <img src='https://n2-q.mafengwo.net/s13/M00/81/E8/wKgEaVyuppyAeDutAAGUHAdNOhs63.jpeg' />
-                                                <span>������ɽ�ҡ�</span>
-                                                <p>���������Ķȼٴ�ʽ�г�</p>
+                                                <span>“海幸山幸”</span>
+                                                <p>从神话中来的度假村式列车</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>����ʱ�䣺1������1��</span>
+                                                <span className={style.add}>运行时间：1日往返1次</span>
 
                                             </div>
 
@@ -227,26 +227,26 @@ class Home extends Component {
                                         <div className={style.comments_rousel}>
                                             <div >
                                                 <img src='https://p2-q.mafengwo.net/s13/M00/1F/34/wKgEaVx0O6KATuXrAAdX_a0njSA88.jpeg' />
-                                                <span>����ɽ</span>
-                                                <p>��������������ĳǱ���</p>
+                                                <span>巴拿山</span>
+                                                <p>漫步在这个浪漫的城堡里</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>��������ʱ����1day</span>
+                                                <span className={style.add}>建议游玩时长：1day</span>
 
                                             </div>
                                             <div >
                                                 <img src='https://n1-q.mafengwo.net/s13/M00/1F/63/wKgEaVx0O7iARKPdAAgIQ2e7A1091.jpeg' />
-                                                <span>���ƹ� �����</span>
-                                                <p>������ȥ��50���ط�֮һ</p>
+                                                <span>海云观 灵姑湾</span>
+                                                <p>人生必去的50个地方之一</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>Tips:��ǰһ���ȥ</span>
+                                                <span className={style.add}>Tips:提前一天过去</span>
 
                                             </div>
                                             <div >
                                                 <img src='https://n2-q.mafengwo.net/s13/M00/1F/75/wKgEaVx0O8CAOUwsAAzt556UJPo80.jpeg' />
-                                                <span>ѿׯ</span>
-                                                <p>�򿨡����ˡ�����������</p>
+                                                <span>芽庄</span>
+                                                <p>打卡‘情人’的浪漫教堂</p>
                                                 <span className={style.sep}></span>
-                                                <span className={style.add}>Tips:����һ������SPA</span>
+                                                <span className={style.add}>Tips:来做一个精油SPA</span>
 
                                             </div>
                                         </div>
@@ -276,29 +276,29 @@ class Home extends Component {
                                 </div>
                             </div>
                             <div className={style.points_right}>
-                                <h2>���е����� �� ��δ�� ����Զ  </h2>
-                                <p>��ÿ���˵��ഺ����������й�һ�ι������е��㽣�һ��˵�߾��ߵ����С���������ʵ���Ϊ���ֵ�ԭ��������õ�ϣ�������ÿ����ҹ�λص���������</p>
+                                <h2>旅行的意义 — 身未动 心已远  </h2>
+                                <p>在每个人的青春年岁里，都曾有过一段关于旅行的憧憬，一段说走就走的旅行。可是在现实里，因为种种的原因，这个美好的希冀变成了每个午夜梦回的美好梦想</p>
                                 <div className={style.right_comment}>
                                     <div className={style.comtain_1}>
                                         <div className={style.twitter}>
-                                            <h6>һ�ݵ���:</h6>
-                                            <a href="#">��</a>
-                                            <p>����������Ѻۣ����ǹ�����ĵط��������ǿƶ�д��һ��ʫ������;֮���Ҷ����������˽⡣�����ٸ��μ����ֵ�ʱ��һ���Ӻ���ͷ�����μǾ�������С�����ʫ���������ʺ����˱����еı��﷽ʽ��</p>
+                                            <h6>一休的窝:</h6>
+                                            <a href="#">顶</a>
+                                            <p>“万物皆有裂痕，那是光进来的地方。”这是科恩写的一句诗，在旅途之初我对他还不甚了解。回来再给游记配乐的时候，一下子毫无头绪的游记就有了灵感。游吟诗，就是最适合这趟北美行的表达方式”</p>
                                         </div>
                                         <div className={style.facebook}>
-                                            <h6>Yozukiëë��</h6>
+                                            <h6>Yozuki毛毛酱</h6>
                                             <img src="https://b3-q.mafengwo.net/s12/M00/17/7F/wKgED1vpTYaAK6MfAAkdaR5NnKs66.jpeg?imageMogr2%2Fthumbnail%2F%21200x200r%2Fgravity%2FCenter%2Fcrop%2F%21200x200%2Fquality%2F90" width='30px' height='30px' />
                                             {/* <i className={style.MAvaTagfengshou}></i> */}
-                                            <p>���Ŷ�����֮������������󣬰Ѿ�ᦴ��������죬��������Ʈ���һ������ᦣ�����������Դ��������ɫ�ʡ�</p>
+                                            <p>“才多少米之差，坡上妖风阵阵，把经幡吹动得作响，不过肆意飘起的一串串经幡，给单调的泸源崖增添了色彩”</p>
                                         </div>
                                     </div>
                                     <div className={style.comtain_1}>
-                                        <h3>�׿���δ�� �����</h3>
-                                        <span>�ܷ��ٵ����</span>
+                                        <h3>雷克雅未克 大教堂</h3>
+                                        <span>管风琴的设计</span>
                                     </div>
                                     <div className={style.comtain_1}>
-                                        <h3>���� ������</h3>
-                                        <span>������ʷ�ĺ��ظ�</span>
+                                        <h3>威海 刘公岛</h3>
+                                        <span>感受历史的厚重感</span>
                                     </div>
                                 </div>
                             </div>
