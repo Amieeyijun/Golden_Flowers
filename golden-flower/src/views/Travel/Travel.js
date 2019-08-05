@@ -49,11 +49,13 @@ class Travel extends Component {
                     </Carousel>
                 </div >
 
-
+                <div>
+                    <img src={require("../../imgs/followme.png")} alt="" style={{ width: '100%' }} />
+                </div>
                 <div className={style.backimg}>
                     <div className={style.box}>
                         <div className={style.gutter_example}>
-                            <Row gutter={16}>
+                            <Row gutter={20}>
                                 <Col className={style.gutter_row} span={8}>
                                     <div className={style.gutter_box}>
                                         {this.state.ItemData[0].map((item, ind) => {

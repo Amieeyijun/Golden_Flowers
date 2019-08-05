@@ -14,7 +14,7 @@ class TravelsItem extends Component {
         this.toDetail = this.toDetail.bind(this);
     }
     toDetail() {
-        this.props.history.push("/travelsdetail?id=" + this.state.itemData.tid);
+        this.props.history.push("/travelsdetail?id=" + this.state.itemData.tid + "&publisher=" + this.state.itemData.publisher);
     }
     render() {
         return (
