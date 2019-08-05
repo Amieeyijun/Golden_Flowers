@@ -6,6 +6,7 @@ import Registered from './views/Admin/Registered'
 import Goods from './views/Goods/Goods'
 import Travel from './views/Travel/Travel'
 import TravelsDetail from './components/travels/travelsdetail/TravelsDetail'
+import App from './views/App/App'
 
 
 
@@ -42,6 +43,10 @@ const routes=[
             {
                 path: '/travelsdetail',
                 component: TravelsDetail
+            },
+            {
+                path: '/app',
+                component: App
             }
         ]
     },

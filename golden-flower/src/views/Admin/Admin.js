@@ -26,31 +26,31 @@ class Admin extends Component {
                 <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" className={style.sdaohang}>
                     <Menu.Item key="mail" className={style.first}>
                         <Icon type="mail" />
-                        �ҵ���
+                        我的窝
         </Menu.Item>
                     <Menu.Item key="app" className={style.second}>
                         <Icon type="appstore" />
-                        �ҵ��μ�
+                        我的游记
         </Menu.Item>
                     <Menu.Item key="call" className={style.third}>
                         <Icon type="appstore" />
-                        �ҵĵ���
+                        我的点评
         </Menu.Item>
                     <Menu.Item key="alipay" className={style.fouth}>
-                        �ҵĶ���
+                        我的订单
                     </Menu.Item>
                     <SubMenu className={style.fifth}
                         title={
                             <span className="submenu-title-wrapper" >
                                 <Icon type="setting" />
-                                ���� </span>
+                                更多 </span>
                         }
                     >
                         <Menu.ItemGroup>
-                            <Menu.Item key="setting:1">�ҵĻ</Menu.Item>
-                            <Menu.Item key="setting:2">�ҵ�С��</Menu.Item>
-                            <Menu.Item key="setting:3">�ҵ��ղ�</Menu.Item>
-                            <Menu.Item key="setting:4">�ҵĽ��</Menu.Item>
+                            <Menu.Item key="setting:1">我的活动</Menu.Item>
+                            <Menu.Item key="setting:2">我的小组</Menu.Item>
+                            <Menu.Item key="setting:3">我的收藏</Menu.Item>
+                            <Menu.Item key="setting:4">我的结伴</Menu.Item>
                         </Menu.ItemGroup>
                     </SubMenu>
                 </Menu>

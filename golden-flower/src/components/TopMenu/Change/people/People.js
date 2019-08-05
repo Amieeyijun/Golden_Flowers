@@ -10,7 +10,7 @@ function Load() {
             <div className={style.hello}>欢迎您~~</div>
             <Link to='/admin'>{userone.username}</Link>
             <div className={style.header}>
-            <Link to='/admin'><Avatar size="large" src="https://i02piccdn.sogoucdn.com/2534159fde91fa3c" /></Link>
+            <Link to='/admin'><Avatar size="large" src="https://i02piccdn.sogoucdn.com/2534159fde91fa3c" title="个人中心"/></Link>
             </div>
 
         </div>

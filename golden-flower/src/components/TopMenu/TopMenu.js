@@ -42,7 +42,7 @@ class TopMenu extends Component {
                                     <Link to='/' className={style.home}> 首页</Link>
                                     <Link to='/travel' className={style.home}>旅游攻略</Link>
                                     <Link to='/goods' className={style.home}>去旅游</Link>
-                                    <Link to='/admin' className={style.home}>个人中心</Link>
+                                    <Link to='/app' className={style.home}>APP</Link>
                                     <Change />
                                 </div>
                             </div>
