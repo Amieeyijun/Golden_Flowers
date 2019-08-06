@@ -1,0 +1,138 @@
+li{
+    list-style: none;
+}
+.container{
+    margin: 20px 0;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: space-between
+}
+
+.guidebox{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ff9d00
+}
+.guidebox >div{
+    flex: 1;
+  
+    box-sizing: border-box;
+}
+.guidebox >div:not(:last-child){
+  border-bottom: 1px solid #E3E3E3 
+}
+/* 下面轮播图的盒子 */
+.carouselbox{
+    width: 73%;
+    height: 100%;
+}
+.carouselbox div{
+    width: 100%;
+    height: 100%;
+}
+.carouselbox img{
+    width: 100%;
+    height: 100%;
+}
+.guideitem{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+.imgbox{
+    padding: 15px 0;
+}
+.imgbox >img{
+    width: 40px;
+    height: 40px;
+}
+.textbox{
+    flex-grow: 1;
+    padding-left: 20px;
+}
+.textbox >p>a{
+color: #666666;
+margin-right: 3px;
+font-size: 12px;
+}
+.textbox>h3{
+    /* box-sizing: border-box;  */
+    /* padding: 10px; */
+    /* text-align: center; */
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+.textbox >p{
+    margin: 0px;
+}
+.textbox >p > a:hover {
+  color:#ff9d00;
+    }
+.myicon{
+    font-size: 20px;
+    line-height: 70px;
+}
+.detailbox{
+    z-index: 100;
+    position: absolute;
+    width: 750px;
+    height: 100%;
+    left: 25%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #ff9d00;border-right: 1px solid #ff9d00;border-bottom: 1px solid #ff9d00;
+    box-sizing: border-box;
+}
+.place{
+    width: 55%;
+    height: 100%;
+}
+.travels{
+    width: 43%;
+    height: 100%;
+}
+.placetitle{
+    width: 100%;
+    border-bottom: 1px solid #DCDCDC;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 6px 0;
+    margin-bottom: 5px;
+}
+.placeitem>ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.placeitem >ul>li::after{
+    content: "";
+    display: inline-block;
+    border-right: 1px solid #D4D4D4;
+    height: 12px;
+    margin: 0 7px;
+}
+.placeitem a{
+color:#484848
+}
+.placeitem a:hover{
+    color:#ff9d00;
+}
+.travelstitle{
+    padding: 6px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.travels li .detailsTitle{
+color: black;
+}
+.travels li{
+    margin-bottom:20px; 
+}
+.travels li .detailsTitle:hover{
+    color: #ff9d00
+}

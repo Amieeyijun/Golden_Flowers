@@ -9,24 +9,34 @@ class TravelsDetail extends Component {
         super(props);
         this.state = {
             detaildata: {},
-            postdata: []
+            postdata: [],
+            block: "block"
         }
     }
     componentDidMount() {
-        let infoid = url.parse(this.props.location.search, true).query.id
-        let publisher = url.parse(this.props.location.search, true).query.publisher
+        let infoid = url.parse(this.props.location.search, true).query.id;
+        let publisher = url.parse(this.props.location.search, true).query.publisher;
+        let title = url.parse(this.props.location.search, true).query.title
         Axios.get('/travels/getDetail', {
             params: {
                 infoid: infoid,
-                publisher: publisher
+                publisher: publisher,
+                title: title
             }
         })
             .then(res => {
-                console.log(res.data)
-                this.setState({
-                    detaildata: res.data[0][0],
-                    postdata: res.data[1]
-                });
+                if (title) {
+                    this.setState({
+                        detaildata: res.data[0],
+                        block: "none"
+                    });
+                } else {
+                    this.setState({
+                        detaildata: res.data[0][0],
+                        postdata: res.data[1]
+                    });
+                }
+
             })
             .catch(err => {
                 console.error(err);
@@ -53,7 +63,7 @@ class TravelsDetail extends Component {
 
                         </div>
                     </div>
-                    <div className={style.userpost}>
+                    <div className={style.userpost} style={{ display: this.state.block }}>
                         <div>
                             <div style={{ fontSize: '20px', fontWeight: 700 }}>ta的帖子</div>
                             {

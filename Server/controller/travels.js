@@ -34,6 +34,32 @@ router.get("/getTravels", (req, res) => {
     });
 })
 router.get("/getDetail", (req, res) => {
+
+    if (req.query.title) {
+        let sql = 'select * from travels where title = ' + `'${req.query.title}'`;
+        mydb.query(sql, (err, result) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            res.send(result)
+        });
+    } else {
+        let sql = `
+        select * from travels where tid = ${req.query.infoid};
+        select * from travels where publisher = '${req.query.publisher}'`
+        mydb.query(sql, (err, result) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            res.send(result)
+        });
+    }
+
+})
+
+router.get("/getDetail", (req, res) => {
     let sql = `
     select * from travels where tid = ${req.query.infoid};
     select * from travels where publisher = '${req.query.publisher}'`
