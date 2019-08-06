@@ -23,6 +23,7 @@ class Admin extends Component {
     };
     render() {
         return (
+            <div className={style.box}>
             <Col xs={8} sm={16} md={24} lg={32} className={style.col}>
                 <img className={style.imgtop} src="http://1.s60i.faiusr.com/2/1050/AJoICAIQjO7ivwUY44_S6gMggA8o9AM.jpg" alt="" />
 
@@ -138,6 +139,7 @@ class Admin extends Component {
                     </Row>
                 </div>
             </Col >
+            </div>
         );
     }
 }
