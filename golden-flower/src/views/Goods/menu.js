@@ -1,12 +1,13 @@
 import React from 'react';
 import { Menu } from 'antd';
 import style from './Goods.module.css';
+
 function changCity(e) {
-    console.log(e.target);
     if (e && e.preventDefault) { e.preventDefault(); }
     else {
         window.event.returnValue = false;
     }
+   document.getElementById('city').innerHTML=e.target.innerHTML;
 }
 const menu = (
     <Menu>

@@ -38,7 +38,7 @@ class Goods extends Component {
                                 <div className={style.departure}>
                                     <Dropdown overlay={menu} trigger={['click']}  >
                                         <a className="ant-dropdown-link" href="#">
-                                            {this.state.city} <span>出发</span>
+                                            <span id='city'>全国</span> <span>出发</span>
                                         </a>
                                     </Dropdown>
                                 </div>

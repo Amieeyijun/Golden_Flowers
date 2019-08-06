@@ -8,44 +8,41 @@ import Travel from './views/Travel/Travel'
 import TravelsDetail from './components/travels/travelsdetail/TravelsDetail'
 import App from './views/App/App'
 import AdminInfo from './views/Admin/AdminInfo'
+import GoodsDetail from './views/GoodsDetail/GoodsDetail'
 
+const routes = [{
+        path: '/',
+        component: HeaderGuide,
+        children: [{
+                path: '/',
+                component: Home,
+                exact: true
+            },
+            {
+                path: '/goods',
+                component: Goods
+            },
+            {
+                path: '/travel',
+                component: Travel
+            },
+            {
+                path: '/admin',
+                component: Admin,
+                children: [{
+                        path: "/",
 
-const routes=[
-    {
-        path:'/',
-        component:HeaderGuide,
-        children:[
-            {
-                path:'/',
-                component:Home,
-                exact:true
-            },
-            {
-                path:'/goods',
-                component:Goods
-            },
-            {
-                path:'/travel',
-                component:Travel
-            },
-            {
-                path:'/admin',
-                component:Admin,
-                children:[
-                    {
-                        path:"/",
-                    
                     }
 
                 ]
             },
             {
-                path:'/login',
-                component:Login
+                path: '/login',
+                component: Login
             },
             {
-                path:'/registered',
-                component:Registered
+                path: '/registered',
+                component: Registered
             },
             {
                 path: '/travelsdetail',
@@ -58,6 +55,10 @@ const routes=[
             {
                 path: '/admininfo',
                 component: AdminInfo
+            },
+            {
+                path: '/goodsDetail',
+                component: GoodsDetail
             }
         ]
     },

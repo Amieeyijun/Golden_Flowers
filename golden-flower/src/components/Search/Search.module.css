@@ -93,7 +93,7 @@ span.start::before {
 }
 
 .inp input {
-    width: 360px;
+    width: 330px;
     height: 30px;
     background-color: transparent;
     border: transparent;
@@ -105,5 +105,18 @@ span.start::before {
     width: 28px;
     height: 28px;
     margin-right: 10px;
-    margin-top: 5px
+    margin-top: 5px;
+}
+
+.all button {
+    background: transparent;
+    border: transparent;
+    border-right: 1px solid #fff;
+    color: #fff
+}
+
+.all button:hover {
+    background: transparent;
+    color: #222222;
+    border-right: 1px solid #fff;
 }

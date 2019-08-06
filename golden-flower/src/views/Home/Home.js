@@ -61,7 +61,7 @@ class Home extends Component {
             <div>
                 <Row>
                     <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                        <BackTop visibilityHeight='650' />
+                
                         <div className={style.rousels}><Rousel /></div>
                         <div className={style.search}>
                             <Search />

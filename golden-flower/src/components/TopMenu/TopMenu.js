@@ -9,17 +9,38 @@ class TopMenu extends Component {
         super(props);
         this.state = {
             userAll: "",
-            userone: {}
+            selfStyle: style.home
         }
         this.changeColor = this.changeColor.bind(this)
     }
     changeColor(e) {
-        console.log(e.target)
-        console.log(this.state.userone)
+        if (e.target.href == 'http://localhost:3000/') {
+            this.setState(
+                { selfStyle: style.home }
+            )
+        }
+        if (e.target.href == 'http://localhost:3000/travel') {
+            this.setState(
+                { selfStyle: style.travels }
+            )
+        }
+        if (e.target.href == 'http://localhost:3000/goods') {
+            this.setState(
+                { selfStyle: style.goods }
+            )
+        }
+        if (e.target.href == 'http://localhost:3000/app') {
+            this.setState(
+                { selfStyle: style.APP }
+            )
+        }
+        if (e.target.href == undefined) {
+            this.setState(
+                { selfStyle: style.welcome }
+            )
+        }
     }
-
     componentDidMount() {
-
         this.setState({
             userAll: window.sessionStorage.getItem("user"),
             userone: JSON.parse(window.sessionStorage.getItem("user"))
@@ -40,10 +61,10 @@ class TopMenu extends Component {
 
                                 </div>
                                 <div className={style.contain} onClick={this.changeColor}>
-                                    <Link to='/' className={style.home}> 首页</Link>
-                                    <Link to='/travel' className={style.home}>旅游攻略</Link>
-                                    <Link to='/goods' className={style.home}>去旅游</Link>
-                                    <Link to='/app' className={style.home}>APP</Link>
+                                    <Link to='/' className={this.state.selfStyle}> 首页</Link>
+                                    <Link to='/travel' className={this.state.selfStyle}>旅游攻略</Link>
+                                    <Link to='/goods' className={this.state.selfStyle}>去旅游</Link>
+                                    <Link to='/app' className={this.state.selfStyle}>APP</Link>
                                     <Change />
                                 </div>
                             </div>

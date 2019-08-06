@@ -26,9 +26,13 @@
     text-align: center
 }
 
-.departure a {
+.departure span:nth-of-type(1) {
     color: #222222;
     font-size: 16px
+}
+
+.departure a {
+    color: #222222;
 }
 
 .departure span {

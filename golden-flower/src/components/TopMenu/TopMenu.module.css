@@ -88,3 +88,190 @@
 .contain .home:nth-of-type(4):hover {
     background: #00aed7
 }
+
+
+/* 游记 */
+
+.contain .travels {
+    display: block;
+    height: 68px;
+    width: 15%;
+    line-height: 68px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.contain .travels:nth-of-type(1) {
+    border-bottom: 4px solid #ee3440
+}
+
+.contain .travels:nth-of-type(1):hover {
+    background-color: #ee3440;
+}
+
+.contain .travels:nth-of-type(2) {
+    background-color: #87af24;
+    border-bottom: 4px solid #87af24
+}
+
+.contain .travels:nth-of-type(2):hover {
+    background: #87af24
+}
+
+.contain .travels:nth-of-type(3) {
+    border-bottom: 4px solid #ea4c89
+}
+
+.contain .travels:nth-of-type(3):hover {
+    background: #ea4c89
+}
+
+.contain .travels:nth-of-type(4) {
+    border-bottom: 4px solid #00aed7
+}
+
+.contain .travels:nth-of-type(4):hover {
+    background: #00aed7
+}
+
+
+/* 产品 */
+
+.contain .goods {
+    display: block;
+    height: 68px;
+    width: 15%;
+    line-height: 68px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.contain .goods:nth-of-type(1) {
+    border-bottom: 4px solid #ee3440
+}
+
+.contain .goods:nth-of-type(1):hover {
+    background-color: #ee3440;
+}
+
+.contain .goods:nth-of-type(2) {
+    border-bottom: 4px solid #87af24
+}
+
+.contain .goods:nth-of-type(2):hover {
+    background: #87af24
+}
+
+.contain .goods:nth-of-type(3) {
+    background-color: #ea4c89;
+    border-bottom: 4px solid #ea4c89
+}
+
+.contain .goods:nth-of-type(3):hover {
+    background: #ea4c89
+}
+
+.contain .goods:nth-of-type(4) {
+    border-bottom: 4px solid #00aed7
+}
+
+.contain .goods:nth-of-type(4):hover {
+    background: #00aed7
+}
+
+
+/* APP */
+
+.contain .APP {
+    display: block;
+    height: 68px;
+    width: 15%;
+    line-height: 68px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.contain .APP:nth-of-type(1) {
+    border-bottom: 4px solid #ee3440
+}
+
+.contain .APP:nth-of-type(1):hover {
+    background-color: #ee3440;
+}
+
+.contain .APP:nth-of-type(2) {
+    border-bottom: 4px solid #87af24
+}
+
+.contain .APP:nth-of-type(2):hover {
+    background: #87af24
+}
+
+.contain .APP:nth-of-type(3) {
+    border-bottom: 4px solid #ea4c89
+}
+
+.contain .APP:nth-of-type(3):hover {
+    background: #ea4c89
+}
+
+.contain .APP:nth-of-type(4) {
+    background-color: #00aed7;
+    border-bottom: 4px solid #00aed7
+}
+
+.contain .APP:nth-of-type(4):hover {
+    background: #00aed7
+}
+
+
+/* 欢迎你 */
+
+.contain .welcome {
+    display: block;
+    height: 68px;
+    width: 15%;
+    line-height: 68px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.contain .welcome:nth-of-type(1) {
+    border-bottom: 4px solid #ee3440
+}
+
+.contain .welcome:nth-of-type(1):hover {
+    background-color: #ee3440;
+}
+
+.contain .welcome:nth-of-type(2) {
+    border-bottom: 4px solid #87af24
+}
+
+.contain .welcome:nth-of-type(2):hover {
+    background: #87af24
+}
+
+.contain .welcome:nth-of-type(3) {
+    border-bottom: 4px solid #ea4c89
+}
+
+.contain .welcome:nth-of-type(3):hover {
+    background: #ea4c89
+}
+
+.contain .welcome:nth-of-type(4) {
+    border-bottom: 4px solid #00aed7
+}
+
+.contain .welcome:nth-of-type(4):hover {
+    background: #00aed7
+}
