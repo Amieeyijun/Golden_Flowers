@@ -3,6 +3,7 @@ import style from './TopMenu.module.css'
 import { Link } from 'react-router-dom'
 import { Row, Col } from 'antd';
 import Change from '../TopMenu/Change/Change'
+import { BackTop } from 'antd';
 class TopMenu extends Component {
     constructor(props) {
         super(props);
@@ -46,7 +47,7 @@ class TopMenu extends Component {
                                     <Change />
                                 </div>
                             </div>
-
+                            <BackTop visibilityHeight='650' />
                         </Col>
                     </Row>
                 </div>

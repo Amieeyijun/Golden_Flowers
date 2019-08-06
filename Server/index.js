@@ -60,11 +60,13 @@ app.use('/login', require('./controller/login'))
 app.use('/travels', require('./controller/travels'))
     // 旅游景点子路由
 app.use('/attract', require('./controller/attract'))
+    // 旅游产品子路由
+app.use('/goods', require('./controller/goods'))
 
 
 
 // 接受上传的图片
-app.post('/uploads', upload.single('images'), function (req, res, next) {
+app.post('/uploads', upload.single('images'), function(req, res, next) {
     // console.log(req.file);
     res.json({ imgsrc: host + 'uploads/' + req.file.filename });
 });

@@ -7,7 +7,7 @@ import style from './Home.module.css'
 import axios from '../../Axios/Axios'
 import { Carousel } from 'antd'
 import { Row, Col } from 'antd';
-import { BackTop } from 'antd';
+
 class Home extends Component {
     constructor(props) {
         super(props)
@@ -37,9 +37,7 @@ class Home extends Component {
         axios.get('/attract/get')
             .then((res) => {
                 console.log(res.data)
-                this.setState(
-                    { allData: res.data }
-                )
+                this.setState({ allData: res.data })
             })
             .catch(
                 (err) => {
@@ -48,10 +46,8 @@ class Home extends Component {
             )
         axios.get('/attract/gettravels')
             .then((res) => {
-                
-                this.setState(
-                    { travelsData: res.data }
-                )
+
+                this.setState({ travelsData: res.data })
                 console.log(this.state.travelsData)
             })
             .catch(
