@@ -49,6 +49,9 @@ class AdminInfo extends Component {
     state = {
         confirmDirty: false,
         autoCompleteResult: [],
+        userinfo:JSON.parse(window.sessionStorage.getItem("user")),
+        usernumber:JSON.parse(window.sessionStorage.getItem("user")).phonenumber.slice(3),
+        userlive:JSON.parse(window.sessionStorage.getItem("user")).live.split('/')
     };
     handleSubmit = e => {
         e.preventDefault();
@@ -61,6 +64,9 @@ class AdminInfo extends Component {
                         console.log(res)
                         if (res.data.msg == "updata-ok") {
                             alert("修改成功")
+                            this.props.history.push('/login')
+                            window.sessionStorage.removeItem("user")
+                            window.location.reload()
                         }
                     })
                     .catch(err => {
@@ -146,6 +152,7 @@ class AdminInfo extends Component {
                     >
                         {getFieldDecorator('nickname', {
                             rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
+                            initialValue:this.state.userinfo.username
                         })(<Input />)}
                     </Form.Item>
                     <Form.Item label="密码" hasFeedback>
@@ -159,6 +166,7 @@ class AdminInfo extends Component {
                                     validator: this.validateToNextPassword,
                                 },
                             ],
+                            initialValue:this.state.userinfo.password
                         })(<Input.Password />)}
                     </Form.Item>
                     <Form.Item label="确认密码" hasFeedback>
@@ -172,7 +180,8 @@ class AdminInfo extends Component {
                                     validator: this.compareToFirstPassword,
                                 },
                             ],
-                        })(<Input.Password onBlur={this.handleConfirmBlur} />)}
+                            initialValue:this.state.userinfo.password
+                        })(<Input.Password onBlur={this.handleConfirmBlur}  />)}
                     </Form.Item>
 
                     <Form.Item label="E-mail">
@@ -187,11 +196,12 @@ class AdminInfo extends Component {
                                     message: 'Please input your E-mail!',
                                 },
                             ],
+                            initialValue:this.state.userinfo.email
                         })(<Input />)}
                     </Form.Item>
                     <Form.Item label="居住地">
                         {getFieldDecorator('residence', {
-                            initialValue: ['zhejiang', 'hangzhou', 'xihu'],
+                            initialValue: [this.state.userlive[0], this.state.userlive[1], this.state.userlive[2]],
                             rules: [
                                 { type: 'array', required: true, message: 'Please select your habitual residence!' },
                             ],
@@ -199,8 +209,11 @@ class AdminInfo extends Component {
                     </Form.Item>
                     <Form.Item label="联系方式">
                         {getFieldDecorator('phone', {
-                            rules: [{ required: true, message: 'Please input your phone number!' }],
-                        })(<Input addonBefore={prefixSelector} style={{ width: '100%' }} />)}
+                            rules: [{ required: true, message: 'Please input your phone number!' }
+    
+                        ],
+                        initialValue:this.state.usernumber
+                        })(<Input addonBefore={prefixSelector} style={{ width: '100%' }}  />) }
                     </Form.Item>
 
 

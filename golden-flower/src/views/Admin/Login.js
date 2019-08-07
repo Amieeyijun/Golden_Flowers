@@ -19,6 +19,7 @@ class Login extends Component {
                             alert("登陆成功");
                             this.props.history.push('/')
                             window.sessionStorage.setItem("user", JSON.stringify(res.data.userinfo))
+                            window.location.reload()
                             console.log(window.sessionStorage)
                         } else if (res.data.msg == 'different') {
                             alert("密码错误")
