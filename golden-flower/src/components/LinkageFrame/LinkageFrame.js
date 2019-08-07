@@ -124,7 +124,7 @@ class LinkageFrame extends Component {
                 {
                     img: require("../../imgs/QM.png"),
                     place: "东南亚 南亚 泰国",
-                    scene: ["普吉岛", "清迈", "巴厘岛", "马尔代夫"],
+                    scene: ["普吉岛", "巴厘岛", "马尔代夫"],
                     detailData: [
                         [
                             {
@@ -292,11 +292,14 @@ class LinkageFrame extends Component {
             detaildisplay: "block"
         })
 
-        this.refs['icon' + index].style.color = "#ff9d00"
+        this.refs['icon' + index].style.color = "#ff9d00";
+        this.refs['myborder' + index].style.borderRight = "1px solid white"
+
 
     }
     changecolor(index) {
-        this.refs['icon' + index].style.color = "inherit"
+        this.refs['icon' + index].style.color = "inherit";
+        this.refs['myborder' + index].style.borderRight = "1px solid #ff9d00"
 
     }
     detaildisplaynone() {
@@ -317,7 +320,7 @@ class LinkageFrame extends Component {
 
 
                                 return (
-                                    <div className={style.guideitem} onMouseEnter={() => { this.showdetail(index) }} onMouseLeave={() => { this.changecolor(index) }} key={index}>
+                                    <div className={style.guideitem} onMouseEnter={() => { this.showdetail(index) }} onMouseLeave={() => { this.changecolor(index) }} ref={`myborder${index}`} key={index}>
                                         <div className={style.imgbox}>
                                             <img src={item.img} alt="" />
                                         </div>

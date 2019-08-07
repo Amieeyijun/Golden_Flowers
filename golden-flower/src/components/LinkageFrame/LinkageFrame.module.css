@@ -15,7 +15,9 @@ li{
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #ff9d00
+    border-top: 1px solid #ff9d00;
+    border-bottom: 1px solid #ff9d00;
+
 }
 .guidebox >div{
     flex: 1;
@@ -42,6 +44,8 @@ li{
     display: flex;
     justify-content: space-around;
     padding: 0 10px;
+    border-left: 1px solid #ff9d00;
+    border-right: 1px solid #ff9d00;
 }
 .imgbox{
     padding: 15px 0;
