@@ -230,3 +230,8 @@
 .bodyer .MessageBoard input:hover{
     background-color: #ff8a00;
 }
+.bodyer .srcc{
+    width: 100%;
+    height: 11%;
+    margin-top: 14%;
+}

@@ -54,4 +54,19 @@ router.post("/Registe", function (req, res) {
 
 	})
 });
+router.post('/userupdata', (req, res) => {
+    console.log(req.body)
+    var sql =
+        `UPDATE user SET username="${req.body.nickname}",password="${req.body.password}",email="${req.body.email}",live="${req.body.residence.join('/')}",phonenumber="+${req.body.prefix}${req.body.phone}" WHERE id = ${req.body.id}`;
+    mydb.query(sql, (err, result) => {
+		if (err) {
+			console.log(err);
+			return;
+		} else {
+			res.json({
+				msg: 'updata-ok'
+			})
+		}
+    })
+})
 module.exports = router;

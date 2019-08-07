@@ -7,7 +7,7 @@ export default function Mytravel(){
             <div className={style.mytravel}>
                 <div>
                     <img src={require("../../../imgs/mytravel.png")} alt=""/>
-                    <div><Icon type="edit" />写游记</div>
+                    <div title="写游记"><a href="#"><Icon type="edit" />写游记</a></div>
                 </div>
                 <img src="http://css.mafengwo.net/images/home_new2015/noyj_v2.jpg" alt=""/>
                 <div className={style.del}>

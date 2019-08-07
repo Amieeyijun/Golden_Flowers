@@ -41,7 +41,7 @@ class Admin extends Component {
                         我的点评
         </Menu.Item>
                     <Menu.Item key="alipay" className={style.fouth}>
-                        我的订单
+                        购物车
                     </Menu.Item>
                     <SubMenu className={style.fifth}
                         title={
@@ -132,6 +132,7 @@ class Admin extends Component {
                                 <textarea name="" id="" cols="30" rows="10">说点啥呗..</textarea>
                                 <input type="button" value="留言" />
                             </div>
+                            <img src={require('../../imgs/LOGO.png')} alt="" className={style.srcc}/>
                         </Col>
                         <Col span={16} className={style.eight}>
                             <Myhome now={this.state.current} name={this.state.username}/>

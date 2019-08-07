@@ -26,6 +26,9 @@
     color: white;
     background-color: #ff8a00;
 }
+.mytravelAll .mytravel>div>div a{
+    color: white
+}
 .mytravelAll .mytravel .del{
     width: 120px;
     display: flex;

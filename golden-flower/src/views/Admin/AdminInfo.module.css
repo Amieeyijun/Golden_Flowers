@@ -1,0 +1,34 @@
+.registered>form{
+    margin: 0 auto;
+    width: 500px;
+    height: 100%;
+    border: 1px solid transparent;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.registered {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.registered>form>div:first-child{
+    margin-top: 88px;
+}
+.registered>form>div{
+    margin-left: -97px;
+}
+.registered>form>div:last-child{
+    margin-left: 120px;
+}
+.registered h1{
+    text-align: center;
+    margin-top: 10%;
+}
