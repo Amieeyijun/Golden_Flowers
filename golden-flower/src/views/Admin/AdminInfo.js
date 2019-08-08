@@ -14,15 +14,15 @@ const { Option } = Select;
 const residences = [
     {
         value: 'zhejiang',
-        label: '’„Ω≠',
+        label: 'ÊµôÊ±ü',
         children: [
             {
                 value: 'hangzhou',
-                label: '∫º÷›',
+                label: 'Êù≠Â∑û',
                 children: [
                     {
                         value: 'xihu',
-                        label: 'Œ˜∫˛',
+                        label: 'Ë•øÊπñ',
                     },
                 ],
             },
@@ -30,15 +30,15 @@ const residences = [
     },
     {
         value: 'jiangsu',
-        label: 'Àƒ¥®',
+        label: 'ÂõõÂ∑ù',
         children: [
             {
                 value: 'nanjing',
-                label: '≥…∂º',
+                label: 'ÊàêÈÉΩ',
                 children: [
                     {
                         value: 'zhonghuamen',
-                        label: 'Ω≈£«¯',
+                        label: 'ÈáëÁâõÂå∫',
                     },
                 ],
             },
@@ -63,7 +63,7 @@ class AdminInfo extends Component {
                     .then(res => {
                         console.log(res)
                         if (res.data.msg == "updata-ok") {
-                            alert("–ﬁ∏ƒ≥…π¶")
+                            alert("‰øÆÊîπÊàêÂäü")
                             this.props.history.push('/login')
                             window.sessionStorage.removeItem("user")
                             window.location.reload()
@@ -139,11 +139,11 @@ class AdminInfo extends Component {
                     <source src="https://www.matter.to/wp-content/uploads/2019/06/Matter_Reel_FA.mp4" />
                 </video>
                 <Form {...formItemLayout} onSubmit={this.handleSubmit} >
-                    <h1>–ﬁ∏ƒ–≈œ¢</h1>
+                    <h1>‰øÆÊîπ‰ø°ÊÅØ</h1>
                     <Form.Item
                         label={
                             <span>
-                                ”√ªßÍ«≥∆&nbsp;
+                                Áî®Êà∑ÊòµÁß∞&nbsp;
                 <Tooltip title="What do you want others to call you?">
                                     <Icon type="question-circle-o" />
                                 </Tooltip>
@@ -155,7 +155,7 @@ class AdminInfo extends Component {
                             initialValue:this.state.userinfo.username
                         })(<Input />)}
                     </Form.Item>
-                    <Form.Item label="√‹¬Î" hasFeedback>
+                    <Form.Item label="ÂØÜÁ†Å" hasFeedback>
                         {getFieldDecorator('password', {
                             rules: [
                                 {
@@ -169,7 +169,7 @@ class AdminInfo extends Component {
                             initialValue:this.state.userinfo.password
                         })(<Input.Password />)}
                     </Form.Item>
-                    <Form.Item label="»∑»œ√‹¬Î" hasFeedback>
+                    <Form.Item label="Á°ÆËÆ§ÂØÜÁ†Å" hasFeedback>
                         {getFieldDecorator('confirm', {
                             rules: [
                                 {
@@ -199,7 +199,7 @@ class AdminInfo extends Component {
                             initialValue:this.state.userinfo.email
                         })(<Input />)}
                     </Form.Item>
-                    <Form.Item label="æ”◊°µÿ">
+                    <Form.Item label="Â±Ö‰ΩèÂú∞">
                         {getFieldDecorator('residence', {
                             initialValue: [this.state.userlive[0], this.state.userlive[1], this.state.userlive[2]],
                             rules: [
@@ -207,7 +207,7 @@ class AdminInfo extends Component {
                             ],
                         })(<Cascader options={residences} />)}
                     </Form.Item>
-                    <Form.Item label="¡™œµ∑Ω Ω">
+                    <Form.Item label="ËÅîÁ≥ªÊñπÂºè">
                         {getFieldDecorator('phone', {
                             rules: [{ required: true, message: 'Please input your phone number!' }
     
@@ -219,7 +219,7 @@ class AdminInfo extends Component {
 
                     <Form.Item {...tailFormItemLayout}>
                         <Button type="primary" htmlType="submit">
-                            –ﬁ∏ƒ
+                            ‰øÆÊîπ
             </Button>
                     </Form.Item>
                 </Form>
