@@ -1,0 +1,41 @@
+.Mygoods {
+    width: 98%;
+    margin-left: 10px;
+    margin-top: 18px;
+}
+
+.main {
+    width: 100%;
+    background-color: #ffffff
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #eaeaea;
+    line-height: 50px;
+    background-color: #ffffff
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-around
+}
+
+.header ul input {
+    width: 15px;
+    height: 15px;
+    background-color: aliceblue
+}
+
+.kong {
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff
+}
+
+.item {
+    width: 100%;
+    background-color: #ffffff;
+    height: 500px
+}

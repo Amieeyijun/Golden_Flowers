@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './WangEditor.css';
+// import './WangEditor.css';
 import E from 'wangeditor';
 import Axios from '../../../Axios/Axios';
 
@@ -86,10 +86,10 @@ class WangEditor extends Component {
     }
     render() {
         return (
-            <div style={{ width: "800px" }}>
-                发布人:   <input type="text" name="user" onChange={this.handleChange} value={this.state.travels.user} /><br />
-                标题:     <input type="text" name="title" onChange={this.handleChange} value={this.state.travels.title} /> <br />
-                简介:     <input type="text" name="info" onChange={this.handleChange} value={this.state.travels.info} /><br />
+            <div style={{ width: "800px",margin:"15px auto",textAlign:"center" }}>
+                发布人:   <input type="text" name="user" onChange={this.handleChange} value={this.state.travels.user} style={{ marginBottom:"15px"}} /><br />
+                标题:     <input type="text" name="title" onChange={this.handleChange} value={this.state.travels.title} style={{ marginBottom:"15px"}}/> <br />
+                简介:     <input type="text" name="info" onChange={this.handleChange} value={this.state.travels.info} style={{ marginBottom:"15px"}}/><br />
 
                 <div>
                     {/* 将生成编辑器 */}
