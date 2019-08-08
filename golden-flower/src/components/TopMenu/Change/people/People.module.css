@@ -28,3 +28,7 @@
     display: inline-block;
     margin-left: 20px
 }
+.login .goout{
+    margin-left: 4em;
+    display: inline-block;
+}
