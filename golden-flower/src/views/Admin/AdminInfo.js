@@ -63,10 +63,18 @@ class AdminInfo extends Component {
                     .then(res => {
                         console.log(res)
                         if (res.data.msg == "updata-ok") {
+<<<<<<< HEAD
                             alert("修改成功")
+=======
+<<<<<<< HEAD
+                            alert("修改成功")
+=======
+                            alert("�޸ĳɹ�")
+>>>>>>> d66403cb313319ed5596ac8a803eecfccc5946be
                             this.props.history.push('/login')
                             window.sessionStorage.removeItem("user")
                             window.location.reload()
+>>>>>>> e5b223910cabc2ce761572b4f451b94e394ee293
                         }
                     })
                     .catch(err => {

@@ -57,6 +57,18 @@
 
 .cart {
     color: #666666;
-    margin-left: 40px;
+    margin-left: 20px;
     font-size: 12px
+}
+
+.shoping {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 20px
+}
+
+.shoping img {
+    width: 100%;
+    height: 100%
 }
