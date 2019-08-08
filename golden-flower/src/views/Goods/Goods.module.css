@@ -122,10 +122,16 @@
     height: 405px
 }
 
-.mod_promo {
+.main {
+    width: 1000px;
+    min-height: 600px;
+    padding-top: 50px
+}
+
+.mode {
     width: 1000px;
     height: 315px;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .mod_hd {
