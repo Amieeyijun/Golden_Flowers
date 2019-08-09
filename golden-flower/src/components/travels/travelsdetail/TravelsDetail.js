@@ -14,6 +14,7 @@ class TravelsDetail extends Component {
         }
     }
     componentDidMount() {
+        let keywords = this.props.location.search.substr(1);
         let infoid = url.parse(this.props.location.search, true).query.id;
         let publisher = url.parse(this.props.location.search, true).query.publisher;
         let title = url.parse(this.props.location.search, true).query.title
@@ -21,7 +22,8 @@ class TravelsDetail extends Component {
             params: {
                 infoid: infoid,
                 publisher: publisher,
-                title: title
+                title: title,
+                keywords: keywords
             }
         })
             .then(res => {
@@ -30,17 +32,30 @@ class TravelsDetail extends Component {
                         detaildata: res.data[0],
                         block: "none"
                     });
-                } else {
+                    return;
+                }
+                if (infoid && publisher) {
+                    console.log('notitle', res.data)
                     this.setState({
                         detaildata: res.data[0][0],
                         postdata: res.data[1]
                     });
+                    return;
+                }
+                if (keywords) {
+                    console.log(keywords, res.data)
+                    this.setState({
+                        detaildata: res.data[0],
+                        block: "none"
+                    });
+                    return;
                 }
 
             })
             .catch(err => {
                 console.error(err);
             })
+
     }
     render() {
         return (

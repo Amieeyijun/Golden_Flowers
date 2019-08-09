@@ -6,6 +6,7 @@ import LinkageFrame from "../../components/LinkageFrame/LinkageFrame"
 import axios from '../../Axios/Axios'
 import menu from './menu'
 import Product from '../../components/Product/Product'
+import store from '../../store'
 class Goods extends Component {
     constructor(props) {
         super(props)
@@ -18,6 +19,7 @@ class Goods extends Component {
             boutList: [],
             city: '全国'
         }
+        this.addgoods=this.addgoods.bind(this)
     }
     componentDidMount() {
         axios.get('/goods/getitems')
@@ -25,10 +27,17 @@ class Goods extends Component {
                 this.setState({
                     productList: res.data
                 })
-                console.log(this.state.productList);
 
             })
             .catch(err => { console.log(err) })
+    }
+    addgoods(value){
+        let action = {
+            type: 'add_cart',
+            value: this.state.productList[value.target.id]
+        }
+        // 派遣任务
+        store.dispatch(action)
     }
     render() {
         return (
@@ -67,7 +76,7 @@ class Goods extends Component {
                                 <div className={style.mod_promo_item}>
                                     {this.state.productList.map((item, index) => {
                                         if (index < 4) {
-                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price} Gid={item.id}/>
+                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price} Gid={item.id} addCart={this.addgoods}  />
                                         }
                                     })}
                                 </div>
@@ -83,7 +92,7 @@ class Goods extends Component {
                                 <div className={style.mod_promo_item}>
                                     {this.state.productList.map((item, index) => {
                                         if (index >=4 && index <8) {
-                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price}  Gid={item.id} />
+                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price}  Gid={item.id} addCart={this.addgoods} />
                                         }
                                     })}
                                 </div>
@@ -100,7 +109,7 @@ class Goods extends Component {
                                 <div className={style.mod_promo_item}>
                                     {this.state.productList.map((item, index) => {
                                         if (index >=8 && index <12) {
-                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price}  Gid={item.id} />
+                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price}  Gid={item.id} addCart={this.addgoods} />
                                         }
                                     })}
                                 </div>
@@ -116,7 +125,7 @@ class Goods extends Component {
                                 <div className={style.mod_promo_item}>
                                     {this.state.productList.map((item, index) => {
                                         if (index >=12 && index <16) {
-                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price}  Gid={item.id} />
+                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price}  Gid={item.id} addCart={this.addgoods} />
                                         }
                                     })}
                                 </div>
@@ -132,7 +141,7 @@ class Goods extends Component {
                                 <div className={style.mod_promo_item}>
                                     {this.state.productList.map((item, index) => {
                                         if (index >=16 && index <20) {
-                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price}  Gid={item.id} />
+                                            return <Product Gimg={item.src1} key={index} Gtitle={item.package} Gprice={item.price}  Gid={item.id} addCart={this.addgoods}/>
                                         }
                                     })}
                                 </div>

@@ -4,15 +4,15 @@
 
 .login {
     width: 40%;
-    height: 68px;
-    line-height: 68px;
+    height: 70px;
+    line-height: 70px;
     padding-left: 45px;
     border-bottom: 4px solid #a649cb;
-    color: white
+    color: #222222
 }
 
 .login a {
-    color: white;
+    color: #222222;
     font-size: 14px;
     font-weight: 700
 }
@@ -20,15 +20,18 @@
 .login:hover {
     background-color: #a649cb
 }
-.login .hello{
-    margin-right:3em ;
+
+.login .hello {
+    margin-right: 3em;
     display: inline-block
 }
-.login .header{
+
+.login .header {
     display: inline-block;
     margin-left: 20px
 }
-.login .goout{
+
+.login .goout {
     margin-left: 4em;
     display: inline-block;
 }

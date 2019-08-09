@@ -1,36 +1,17 @@
 import React, { Component } from 'react';
 import style from './Product.module.css';
 import axios from '../../Axios/Axios';
-import store from '../../store'
 
 class Product extends Component {
     constructor(props) {
         super(props)
         this.addCart = this.addCart.bind(this)
         this.state = {
-            goodsCart: [],
-            goods: {
-                imgs: ''
-            }
+            goodsCart: []
         }
     }
     addCart(e) {
-        console.log(e.target.id);
-        axios.get('/goods/addCart',{params:{id:e.target.id}})
-        .then(res=>{
-            // 定义动作，加入购物车
-            let action ={
-                type: 'add_cart',
-               value: res.data
-            }
-            // 派遣任务
-            store.dispatch(action)
-
-        })
-        .catch(err=>{
-            console.log(err)
-        }
-        )
+        this.props.addCart(e)
     }
     render() {
         return (

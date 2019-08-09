@@ -36,7 +36,6 @@ class Home extends Component {
     componentDidMount() {
         axios.get('/attract/get')
             .then((res) => {
-                console.log(res.data)
                 this.setState({ allData: res.data })
             })
             .catch(
@@ -48,7 +47,6 @@ class Home extends Component {
             .then((res) => {
 
                 this.setState({ travelsData: res.data })
-                console.log(this.state.travelsData)
             })
             .catch(
                 (err) => {

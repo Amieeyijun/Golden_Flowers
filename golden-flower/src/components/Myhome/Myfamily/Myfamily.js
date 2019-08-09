@@ -2,7 +2,6 @@ import React from 'react';
 import style from './Myfamily.module.css'
 import {Icon} from 'antd';
 export default function Myfamily(props) {
-    console.log(props)
     return (
         <div className={style.myfamily}>
             <div className={style.function}>

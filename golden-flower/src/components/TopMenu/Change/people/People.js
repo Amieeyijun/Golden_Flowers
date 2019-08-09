@@ -5,7 +5,6 @@ import { Avatar } from 'antd';
 import { fn } from 'moment';
 import { func } from 'prop-types';
 function Load() {
-    console.log(JSON.parse(window.sessionStorage.getItem("user")))
     let userone = JSON.parse(window.sessionStorage.getItem("user"))
     let fn = function(){
         window.sessionStorage.removeItem("user")

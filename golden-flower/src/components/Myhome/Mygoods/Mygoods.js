@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import store from '../../../store';
 import style from './Mygoods.module.css';
 import Shopping from '../Shopping/Shopping'
-
 class Mygoods extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            goodsList: [1]
+            goodsList: []
         }
         // ¶©ÔÄ
         this.getStateData = this.getStateData.bind(this)
@@ -15,6 +14,9 @@ class Mygoods extends Component {
     }
     getStateData() {
         this.setState({ goodsList: store.getState().list })
+    }
+    componentDidMount(){
+        this.getStateData();
     }
     render() {
         return (
@@ -33,7 +35,7 @@ class Mygoods extends Component {
                     </div>
                     <div className={style.item}>
                         {this.state.goodsList.map((item, index) => {
-                            return (<Shopping key={index} />)
+                            return (<Shopping key={index}  imgs={item.src2} details={item.package} siglePrice={item.price} />)
                         })}
 
                     </div>

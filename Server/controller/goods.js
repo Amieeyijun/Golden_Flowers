@@ -9,7 +9,7 @@ router.get('/getitems', (req, res) => {
         })
 
     })
-    // ÉÌÆ·¼ÓÈë¹ºÎï³µ
+    // å•†å“åŠ å…¥è´­ç‰©è½¦
 router.get('/addCart', (req, res) => {
 
     let sql = `SELECT * FROM goods WHERE id = ?`

@@ -23,8 +23,7 @@ router.get("/getTravels", (req, res) => {
     let sql = `
         select * from travels limit 0,6;
         select * from travels limit 6,6;
-        select * from travels limit 12,6`
-        ;
+        select * from travels limit 12,6`;
     mydb.query(sql, (err, result) => {
         if (err) {
             console.log(err);
@@ -34,7 +33,6 @@ router.get("/getTravels", (req, res) => {
     });
 })
 router.get("/getDetail", (req, res) => {
-
     if (req.query.title) {
         let sql = 'select * from travels where title = ' + `'${req.query.title}'`;
         mydb.query(sql, (err, result) => {
@@ -43,8 +41,11 @@ router.get("/getDetail", (req, res) => {
                 return;
             }
             res.send(result)
+
         });
-    } else {
+        return;
+    }
+    if (req.query.infoid && req.query.publisher) {
         let sql = `
         select * from travels where tid = ${req.query.infoid};
         select * from travels where publisher = '${req.query.publisher}'`
@@ -53,10 +54,25 @@ router.get("/getDetail", (req, res) => {
                 console.log(err);
                 return;
             }
-            res.send(result)
+            res.send(result);
+
         });
+        return;
     }
 
+    if (req.query.keywords) {
+        let sql = `Select * from travels where title Like '%${req.query.keywords}%' `;
+        mydb.query(sql, (err, result) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            res.send(result);
+
+        });
+        return;
+
+    }
 })
 
 
