@@ -8,7 +8,7 @@ class Mygoods extends Component {
         this.state = {
             goodsList: []
         }
-        // 订阅
+        // 璁㈤槄
         this.getStateData = this.getStateData.bind(this)
         store.subscribe(this.getStateData)
     }
@@ -25,12 +25,12 @@ class Mygoods extends Component {
                     <div className={style.header}>
                         <ul >
                             <li><input type="checkbox" name="" id="" /></li>
-                            <li>商品信息</li>
-                            <li>单价</li>
-                            <li>优惠</li>
-                            <li>数量</li>
-                            <li>小计</li>
-                            <li>操作</li>
+                            <li>鍟嗗搧淇℃伅</li>
+                            <li>鍗曚环</li>
+                            <li>浼樻儬</li>
+                            <li>鏁伴噺</li>
+                            <li>灏忚</li>
+                            <li>鎿嶄綔</li>
                         </ul>
                     </div>
                     <div className={style.item}>
