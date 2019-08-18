@@ -53,7 +53,6 @@ class TopMenu extends Component {
                     <Row>
                         <Col xs={6} sm={6} md={6} lg={6} xl={6}>
                             <div className={style.logo}>
-                                {/* <img src={require("../../imgs/toplogo.png")} alt="" /> */}
                             </div>
                         </Col>
                         <Col xs={18} sm={18} md={18} lg={18} xl={18}>
